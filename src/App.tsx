@@ -1,8 +1,8 @@
 import React from 'react';
 // @ts-ignore
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { ChatBot } from './components';
-import {Hello, Counter, Clock, Kitty} from './components';
+import { ChatBot } from './_components';
+import {Hello, Counter, Clock, Kitty} from './_components';
 import { HomePage } from "./pages";
 import { Provider } from 'react-redux';
 import {ConnectedRouter} from 'connected-react-router';

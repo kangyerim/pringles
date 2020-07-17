@@ -1,6 +1,6 @@
 import {createStore} from 'redux'
 import {createBrowerHistory} from 'history'
-import reducers from "../reducers";
+import reducers from "../_components/configureStore";
 
 export const history = createBrowerHistory()
 

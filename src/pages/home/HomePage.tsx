@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Navigator} from "../../components";
+import {Navigator} from "../../_components";
 
 export default class HomePage extends Component<any, any>{
     public render() {

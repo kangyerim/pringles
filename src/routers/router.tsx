@@ -1,7 +1,7 @@
 import React from "react";
 import {Redirect} from 'react-router-dom'
 import {HomePage} from '../pages'
-import {ChatBot, Counter, Kitty} from '../components'
+import {ChatBot, Counter, Kitty} from '../_components'
 
 const routerConfig = [
     { path: '/', exact: true, component: () => <Redirect to="/home"/> },

@@ -1,5 +1,5 @@
 export { default as ChatBot } from './ChatBot';
-export {default as Navigator} from './common/Navigator'
+export {default as Navigator} from '../common/Navigator'
 
 export {default as Hello} from './oop/Hello'
 export {default as Counter} from './oop/Counter'
