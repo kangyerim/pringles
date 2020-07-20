@@ -7,8 +7,19 @@ const loginConstants = {
     LOGIN_SUCCESS: 'USER_LOGIN_SUCCESS',
     LOGIN_FAILURE: 'USER_LOGIN_FAILURE'
 }
+
+export function request(user) {return {type: loginConstants.LOGIN_REQUEST, user}}
+export function success(user) {return {type: loginConstants.LOGIN_SUCCESS, user}}
+export function failure(error) {return {type: loginConstants.LOGIN_FAILURE, error}}
+
+const initialState = {
+    userid: '',
+    password: ''
+}
+
+
 /*Reducers*/
-function loginReducer(payload, userActions) {
+export default function logIn(payload, userActions) {
     switch (userActions) {
         case loginConstants.LOGIN_REQUEST:
             return {
@@ -72,9 +83,7 @@ function login(e){
                 }
             )
     }
-    function request(user) {return {type: loginConstants.LOGIN_REQUEST, user}}
-    function success(user) {return {type: loginConstants.LOGIN_SUCCESS, user}}
-    function failure(error) {return {type: loginConstants.LOGIN_FAILURE, error}}
+
 }
 function logout(){}
 
@@ -94,10 +103,10 @@ function loginService(userid, password) {
         })
 }
 /* Component */
-const Login = () => {
+const Login: React.FC = () => {
     const [userid,setUserid] = useState("")
     const [password, setPassword] = useState("")
-    loginService(userid, password)
+
     return (<div>
             <h2>Login Form</h2>
             <form name="form" >
